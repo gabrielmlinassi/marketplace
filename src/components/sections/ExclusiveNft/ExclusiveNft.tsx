@@ -37,7 +37,7 @@ const ExclusiveNft = () => {
                 autosize
               />
             ))}
-            slidesPerViewDesktop={3}
+            slidesPerView={[1.1, 2, 3]}
           />
         </div>
       </div>

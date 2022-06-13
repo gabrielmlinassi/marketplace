@@ -6,7 +6,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import s from "styles/collection/nft.module.scss";
-import Certificates, { type CertificateItem } from "data/certificates";
+import Certificates, { CertificateItem } from "data/certificates";
 import { useBreakpoints } from "hooks";
 
 import Certificate from "@components/common/Certificate";
@@ -306,7 +306,7 @@ const NFT: NextPage<Props> = ({ nft }) => {
                 compact
               />
             ))}
-            slidesPerViewDesktop={4}
+            slidesPerView={[1.1, 2, 4]}
           />
         </div>
       </div>
