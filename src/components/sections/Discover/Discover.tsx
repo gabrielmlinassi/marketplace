@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import s from "./Discover.module.scss";
-import Certificates, { type CertificateItem } from "data/certificates";
+import Certificates, { CertificateItem } from "data/certificates";
 import Filters from "./Filters";
 
 import Button from "@components/ui/Button";

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import type { NextPage } from "next";
+import { NextPage } from "next";
 import cn from "classnames";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import s from "styles/Home.module.scss";
-import Products, { type ProductItem } from "data/services";
+import Products, { ProductItem } from "data/services";
 
 import { ArrowRightIcon } from "@components/icons";
 import Button from "@components/ui/Button";

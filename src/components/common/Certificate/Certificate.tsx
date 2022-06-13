@@ -5,7 +5,7 @@ import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import s from "./Certificate.module.scss";
 import Button from "@components/ui/Button";
-import { type CertificateItem } from "data/certificates";
+import { CertificateItem } from "data/certificates";
 import { useBreakpoints } from "hooks";
 import { useRouter } from "next/router";
 
