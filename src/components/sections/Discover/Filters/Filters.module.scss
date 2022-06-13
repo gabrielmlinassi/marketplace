@@ -1,0 +1,41 @@
+.filterBar {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.filterBar.barBottom {
+  display: grid;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fieldset label {
+  color: #b1b5c3;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.separator {
+  height: 1px;
+  background-color: #353945;
+  border: none;
+  margin: 2rem 0;
+}
+
+.buttonsMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media only screen and (min-width: 500px) {
+    flex-direction: row;
+  }
+}

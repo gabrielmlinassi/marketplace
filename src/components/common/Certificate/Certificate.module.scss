@@ -1,0 +1,90 @@
+.root {
+  // max-width: 376px;
+  min-width: 376px;
+
+  &.autosize {
+    min-width: inherit;
+  }
+}
+
+.root .illustration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: solid 2px #31343f;
+  color: #fff;
+  overflow: hidden;
+
+  border-radius: 20px;
+  // aspect-ratio: 6/7;
+
+  &.compact {
+    border: none;
+    border-radius: 12px;
+    // aspect-ratio: 11/17;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+
+    > * + * {
+      margin-top: 12px;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba($color: #1f2128, $alpha: 0.9);
+  }
+}
+
+.root .details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .series {
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba($color: #30b28c, $alpha: 0.25);
+  }
+
+  .name {
+    color: #fcfcf9;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  .priceValue {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 8px;
+    color: #30b28c;
+    border: solid 2px rgba($color: #30b28c, $alpha: 0.25);
+    border-radius: 8px;
+  }
+
+  .alternatePrice {
+    margin-top: 4px;
+    color: #7f8596;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+  }
+}

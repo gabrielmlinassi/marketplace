@@ -1,0 +1,45 @@
+.trigger[data-state="open"] {
+  // FIXME: correct color
+  // border-color: #ebcd81bf;
+}
+
+// FIXME: This is a workaround just to rotate the svg icon on menu opened state,
+// however it's not a good solution. Come back to this in the future to implement a proper solution
+.trigger svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.trigger[data-state="open"] svg {
+  transform: rotate(180deg);
+}
+// --
+
+.content {
+  width: 100%;
+  border: 1px solid rgba($color: #31343f, $alpha: 0.75);
+  border-radius: 12px;
+  box-shadow: 0 16px 24px rgb(51 51 51 / 8%);
+  padding: 12px;
+  background-color: #1f2128;
+
+  z-index: 40;
+}
+
+.item {
+  outline: none;
+  color: #ffffff;
+  padding: 17px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: default;
+}
+
+.item:hover {
+  background-color: #31343f;
+  font-weight: 600;
+}
+
+.item + .item {
+  margin-top: 1px;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "starledger-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "@radix-ui/react-aspect-ratio": "^0.1.4",
+    "@radix-ui/react-dialog": "^0.1.7",
+    "@radix-ui/react-dropdown-menu": "0.1.7-rc.38",
+    "@radix-ui/react-radio-group": "^0.1.5",
+    "@radix-ui/react-slider": "^0.1.4",
+    "@radix-ui/react-tabs": "^0.1.5",
+    "@radix-ui/react-toggle-group": "^0.1.5",
+    "classnames": "^2.3.1",
+    "embla-carousel-react": "^6.2.0",
+    "lodash.chunk": "^4.2.0",
+    "next": "12.1.6",
+    "next-useragent": "^2.8.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "sass": "^1.52.1",
+    "typescript": "4.7.2",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}

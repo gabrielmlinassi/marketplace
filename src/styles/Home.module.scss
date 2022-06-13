@@ -1,0 +1,208 @@
+section.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 0 1rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 72px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 800px;
+    min-width: 300px;
+    margin-right: 1rem;
+  }
+
+  .content h1 {
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    margin-bottom: 48px;
+  }
+
+  .certificate {
+    display: none;
+
+    @media only screen and (min-width: 800px) {
+      display: block;
+    }
+  }
+}
+
+section.statistics {
+  display: flex;
+  flex-direction: column;
+  margin-top: 85px;
+  overflow: hidden;
+
+  .item {
+    padding: 0 1rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 24px 35px;
+  }
+
+  .item + * {
+    border-top: solid 1px #31343f;
+  }
+
+  @media only screen and (min-width: 800px) {
+    flex-direction: row;
+
+    .item + * {
+      border-top: none;
+      border-left: solid 1px #31343f;
+      padding-left: 68px;
+    }
+  }
+
+  .item .circle {
+    margin-right: 1rem;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+
+    &.green {
+      background-color: #30b28c;
+    }
+
+    &.purple {
+      background-color: #9f73e6;
+    }
+
+    &.yellow {
+      background-color: #fdc24f;
+    }
+  }
+
+  .item .label {
+    color: #777e90;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .item .valuesWrap {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    // gap: 0.5rem;
+  }
+
+  .item .value {
+    color: #fcfcf9;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .item .alternateValue {
+    color: #7f8596;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+}
+
+/* ---------- */
+.productsSection {
+  margin-top: 148px;
+  padding: 0 1rem;
+
+  .productsContainer {
+    margin-top: 60px;
+
+    // showcase like a slider up until there's more space so
+    // show stacked horizontally
+    @media only screen and (min-width: 620px) {
+      display: flex;
+      flex-direction: row;
+
+      overflow: auto;
+      scroll-snap-type: x mandatory;
+
+      // hack to force flex item to show besides overflow
+      margin-right: -1rem;
+      padding-right: 1rem;
+
+      // spacing before scrollbar
+      padding-bottom: 2rem;
+    }
+  }
+
+  .productsContainer .product {
+    margin: 0 auto;
+
+    flex: 1 0 auto;
+    scroll-snap-align: start;
+
+    max-width: 400px;
+
+    @media only screen and (min-width: 1024px) {
+      flex: 1 1 auto;
+    }
+  }
+
+  .product + .product {
+    margin-top: 4rem;
+
+    @media only screen and (min-width: 620px) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .product .productImg {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .productFooter {
+    margin: 2rem auto 0;
+    max-width: 325px;
+  }
+
+  .productFooter .footerHeading {
+    font-size: 24px;
+    color: #fcfcf9;
+    font-weight: 600;
+  }
+
+  .productFooter .footerDescription {
+    margin-top: 20px;
+    color: #777e90;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
+
+.discoverSection {
+  margin-top: 120px;
+  padding: 0 1rem;
+
+  @media only screen and (min-width: 620px) {
+    margin-top: 150px;
+  }
+}
+
+.exclusiveNftSection {
+  margin-top: 10rem;
+  padding: 0 1rem;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 17rem;
+  }
+}
+
+.banner {
+  margin-top: 120px;
+  padding: 0 1rem;
+}

@@ -1,0 +1,266 @@
+.root {
+  margin-top: 2rem;
+  padding: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 90px;
+  }
+}
+
+.coverImg {
+  position: relative;
+  width: 100%;
+  height: 350px;
+
+  border-radius: 2rem;
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 20;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.profile .logoWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+
+    margin-left: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.logoWrap .logoImg {
+  width: 142px;
+  height: 142px;
+  min-width: 80px;
+  min-height: 80px;
+
+  margin-top: -4rem;
+
+  background-color: rgba($color: #000, $alpha: 0.25);
+  padding: 2px;
+
+  border-radius: 100%;
+}
+
+.logoImg .logoImgWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .info {
+    margin-left: 1rem;
+  }
+}
+
+.info .infoName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin-right: 12px;
+
+    font-size: 32px;
+    font-weight: 700;
+    color: #fcfcf9;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .info .infoName {
+    justify-content: flex-start;
+  }
+}
+
+.infoStatusWrap {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.infoStatus {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.infoStatus.infoStatusActive {
+  background-color: #30b28c;
+}
+
+.infoNum {
+  display: flex;
+
+  font-size: 14px;
+  color: #7f8596;
+  font-weight: 700;
+
+  span {
+    margin-right: 8px;
+  }
+}
+
+//----------
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  max-width: 75%;
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  border: solid 1px #31343f;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 1rem;
+
+  text-align: center;
+
+  > :first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fcfcf9;
+  }
+
+  > :last-child {
+    margin-top: 4px;
+    color: #7f8596;
+  }
+}
+
+.summaryItem + .summaryItem {
+  border-left: solid 1px #31343f;
+  border-top: solid 1px #31343f;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+    border-top: none;
+  }
+}
+
+//----------
+.discoverSection {
+  margin-top: 120px;
+}
+
+.discoverContent {
+  margin-top: 40px;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 255px 1fr;
+
+    margin-top: 80px;
+  }
+}
+
+.discoverContent .discoverTopFilters {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    gap: 90px;
+    align-items: center;
+  }
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: #b1b5c3;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  > :first-child {
+    margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.fieldset + .fieldset {
+  margin-top: 2rem;
+}
+
+.discoverResults {
+  margin-top: 40px;
+
+  > * + * {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-left: 90px;
+
+    > * + * {
+      margin-top: 0;
+    }
+  }
+}
+
+.discoverResultsLoadMore {
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}
+
+.bannerWrap {
+  margin-top: 120px;
+}

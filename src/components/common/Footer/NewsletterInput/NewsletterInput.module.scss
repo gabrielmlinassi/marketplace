@@ -1,0 +1,23 @@
+.root {
+  display: inline-flex;
+  width: 100%;
+  border: solid 2px #353945;
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.root input {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 300;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: #777e90;
+  }
+}

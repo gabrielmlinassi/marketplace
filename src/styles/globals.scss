@@ -1,0 +1,152 @@
+/* TODO: Attempt to build a color pallete / theme. 
+For now, I'm just adding all the colors used across the project 
+Random strings -> http://www.unit-conversion.info/texttools/random-string-generator/
+*/
+:root {
+  --IvroqLpm: #ffffff;
+  --yYSeX7Pg: #fcfcf9;
+  --26sYEvex: #fcfcfd;
+  --vbEfxKaZ: #e6e8ec;
+  --aGgaqyBH: #7f8596;
+  --cYogJEGD: #777e90;
+  --Rp1uWf87: #494e5b;
+  --Z2XnbYC1: #353945;
+  --zVB8Tkgu: #31343f;
+  --oTrherQr: #1f2128;
+  --58aWt8oa: #141416;
+  --ALXloQBU: #ebcd81;
+  --JMsJLfMI: #fdc24f;
+  --3t9kiH48: #30b28c;
+  --Ocdgl313: #9f73e6;
+}
+
+// Utilities -- Tailwind classes to make it easier to add some basic styles
+.hidden {
+  display: none !important;
+}
+
+.mt-12 {
+  margin-top: 48px;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+/* ---- ---- */
+
+body {
+  margin: 0;
+  background-color: #141416;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+svg {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.desktop-only {
+  @media only screen and (min-width: 0) and (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  @media only screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+//-----------
+@media only screen and (min-width: 768px) {
+  .pattern {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    width: 700px;
+    height: 700px;
+    background: url("/bg-pattern.svg") no-repeat;
+    background-size: cover;
+  }
+
+  .gradient-effect1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 600px;
+    height: 600px;
+
+    border-bottom-left-radius: 100%;
+
+    background: linear-gradient(180deg, #6bebd4 0%, #d8a0fb 100%);
+    mix-blend-mode: overlay;
+    opacity: 0.65;
+    filter: blur(120px);
+  }
+
+  .gradient-effect2 {
+    position: absolute;
+    top: 0;
+    right: 350px;
+
+    width: 300px;
+    height: 200px;
+
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+
+    background: linear-gradient(180deg, #6bebd4 0%, #d8a0fb 100%);
+    mix-blend-mode: overlay;
+    opacity: 0.65;
+    filter: blur(120px);
+  }
+}

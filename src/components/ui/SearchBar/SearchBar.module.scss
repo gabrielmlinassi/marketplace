@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  background-color: transparent;
+  border: solid 2px #353945;
+  border-radius: 8px;
+  padding: 18px 24px;
+  border-radius: 100px;
+}
+
+.input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin-left: 0.5rem;
+  min-width: 200px;
+  font-size: 14px;
+  font-weight: 600;
+}

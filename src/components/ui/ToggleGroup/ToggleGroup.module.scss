@@ -1,0 +1,33 @@
+.root {
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
+.item {
+  padding: 6px 12px;
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: default;
+  color: #777e90;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item:hover,
+.item:focus {
+  background-color: rgba($color: #353945, $alpha: 0.25);
+}
+
+.item:focus {
+  outline: solid 4px rgba($color: #353945, $alpha: 0.1);
+}
+
+.item[data-state="on"],
+.item:active {
+  background-color: #353945;
+  color: #fcfcfd;
+}
+
+.item + .item {
+  margin-left: 16px;
+}

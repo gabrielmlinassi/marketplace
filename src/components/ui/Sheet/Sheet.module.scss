@@ -1,0 +1,60 @@
+.dialogOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-color: rgba($color: #000, $alpha: 0.25);
+}
+
+.dialogContent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 300px;
+
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  background-color: #fcfcfd;
+}
+
+.dialogContent .filter {
+  margin-top: 1rem;
+}
+
+.dialogContent .fitlerHeading {
+  font-weight: 700;
+}
+
+.dialogContent .filterBoxes {
+  margin-top: 0.25rem;
+}
+
+.dialogContent .filterBox {
+  display: inline-flex;
+  padding: 0.5rem 0.75rem;
+
+  border-radius: 8px;
+
+  background-color: red;
+}
+
+.dialogContent .filterBox[data-state="checked"] {
+  background-color: green;
+}
+
+.dialogContent .filterBox + .filterBox {
+  margin-left: 0.25rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #777e90 !important;
+}

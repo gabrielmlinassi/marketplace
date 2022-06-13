@@ -1,0 +1,403 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 1rem;
+  margin-top: 2rem;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 4rem;
+  }
+}
+
+.certificate {
+  flex: 1;
+}
+
+.product .details {
+  min-height: 800px;
+  margin-top: 2rem;
+
+  @media only screen and (min-width: 768px) {
+    flex: 1;
+    margin-top: 80px;
+    margin-left: 90px;
+  }
+}
+
+.product .details .badge {
+  color: #fcfcf9;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.badge + .badge {
+  margin-left: 0.5rem;
+}
+
+.badge.purple {
+  background-color: rgba($color: #9f73e6, $alpha: 0.25);
+}
+
+.badge.green {
+  background-color: rgba($color: #30b28c, $alpha: 0.25);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  text-align: right;
+
+  h1 {
+    font-size: 64px;
+    color: #fcfcf9;
+  }
+
+  .value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #30b28c;
+  }
+
+  .alternateValue {
+    color: #7f8596;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+
+  > :first-child {
+    flex: 1;
+  }
+
+  @media only screen and (min-width: 768px) {
+    > :first-child {
+      flex: 0;
+    }
+  }
+}
+
+.actions > * + * {
+  margin-left: 20px;
+
+  @media only screen and (min-width: 768px) {
+    margin-left: 28px;
+  }
+}
+
+.tabs {
+  margin-top: 40px;
+
+  .tabsList {
+    display: flex;
+
+    padding: 4px;
+    border: solid 2px #353945;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .tabsTrigger {
+    flex: 1;
+
+    padding: 6px 12px;
+    border: none;
+    border-radius: 100px;
+    color: #7f8596;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .tabsTrigger[data-state="active"],
+  .tabsTrigger:hover {
+    background-color: #31343f;
+    color: #fcfcf9;
+  }
+
+  .tabsTrigger + .tabsTrigger {
+    margin-left: 0.5rem;
+  }
+
+  .tabsContent {
+    margin-top: 32px;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+  .tabsContent.tabsContentDescription {
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #7f8596;
+    }
+
+    .tabsContentListItem {
+      display: flex;
+      align-items: center;
+
+      > :last-child {
+        margin-left: 12px;
+      }
+    }
+
+    .tabsContentListItem:first-child {
+      margin-top: 2rem;
+    }
+
+    .tabsContentListItem + .tabsContentListItem {
+      margin-top: 1rem;
+    }
+  }
+
+  .tabsContent.tabsContentDetails {
+    font-size: 18px;
+    font-weight: 500;
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .detail > :first-child {
+      color: #7f8596;
+    }
+
+    .detail > :last-child {
+      color: #fcfcf9;
+    }
+
+    .detail + .detail {
+      margin-top: 12px;
+    }
+  }
+}
+
+//---------
+.extra {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+
+  margin-top: 40px;
+  padding: 40px 0;
+
+  border-top: solid 2px #31343f;
+  border-bottom: solid 2px #31343f;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .extraHeading {
+    color: #7f8596;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .extraIconWrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .extraIcon {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+
+  .extraIconBgBlue {
+    background-color: rgba($color: #3d42df, $alpha: 1);
+  }
+
+  .extraTitle {
+    font-size: 16px;
+    color: #fcfcf9;
+  }
+
+  .extraSubTitle {
+    font-size: 12px;
+    color: #7f8596;
+    font-weight: 700;
+    word-break: break-all;
+  }
+}
+
+/* stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  margin-top: 40px;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+  }
+
+  .statsHeading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7f8596;
+  }
+
+  .statsInnerWrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .statsIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    border-radius: 100%;
+  }
+
+  .statsIconGreenBg {
+    background-color: rgba($color: #30b28c, $alpha: 0.25);
+  }
+  .statsIconRedBg {
+    color: #e45f35;
+    background-color: rgba($color: #d25d4b, $alpha: 0.25);
+  }
+  .statsIconBlueBg {
+    color: #71bbd2;
+    background-color: rgba($color: #71bbd2, $alpha: 0.3);
+  }
+  .statsIconPurpleBg {
+    background-color: rgba($color: #9f73e6, $alpha: 0.25);
+  }
+
+  .statsTitle {
+    color: #7f8596;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .statsSubTitle {
+    color: #fcfcf9;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+}
+
+//--------
+.nftsSection {
+  margin-top: 180px;
+  padding: 0 1rem;
+
+  .nftHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      color: #fcfcfd;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .nftProducts {
+    margin-top: 40px;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 80px;
+    }
+
+    .nftProductsSlider {
+      display: flex;
+      scroll-snap-type: x mandatory;
+      overflow: auto;
+
+      /* scrollbar padding */
+      padding-bottom: 1rem;
+
+      @media only screen and (min-width: 0) and (max-width: 768px) {
+        /* hack to overflow padding constraints */
+        margin-right: -1rem;
+        margin-left: -1rem;
+      }
+
+      @media only screen and (min-width: 768px) {
+        overflow: hidden;
+      }
+    }
+
+    .nftProductsSlide + .nftProductsSlide {
+      /* flex gap workaround for Safari */
+      margin-left: 1rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-left: 2rem;
+      }
+    }
+
+    .nftProductsSlide {
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+
+      min-width: calc((100% / 1.2) - 1rem);
+
+      /* hack to allow slider to take 100vw but give spacing on first and last slide */
+      @media only screen and (min-width: 0) and (max-width: 768px) {
+        &:first-child {
+          margin-left: 1rem;
+        }
+
+        &:last-child {
+          margin-right: 1rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        min-width: calc((100% / 4) - 1.5rem);
+        flex-shrink: 1;
+      }
+    }
+  }
+}
+
+//---------
+.bannerSection {
+  margin-top: 120px;
+  padding: 0 1rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 180px;
+  }
+}

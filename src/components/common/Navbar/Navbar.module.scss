@@ -1,0 +1,84 @@
+.root {
+  position: relative;
+  // padding-left: 6px;
+  // padding-right: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 1rem;
+  }
+}
+
+.nav {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem 1rem 0;
+  //padding-left: 0;
+  color: #fff;
+}
+
+.logoWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navMenu {
+  display: none;
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.link {
+  // https://css-tricks.com/bold-on-hover-without-the-layout-shift/
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 20px;
+  color: #999999;
+  transition: 0.1s;
+
+  &::after {
+    content: attr(data-text);
+    content: attr(data-text) / "";
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-weight: 600;
+
+    @media speech {
+      display: none;
+    }
+  }
+
+  &.active,
+  &:hover {
+    font-weight: 600;
+    color: #ebcd81;
+  }
+}
+
+.link + .link {
+  margin-left: 2rem;
+}
+
+.navLinkActive {
+  background-color: red !important;
+  color: red;
+}
+
+.openSidebarMenuBtn {
+  border: none;
+  background-color: transparent;
+
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
+}

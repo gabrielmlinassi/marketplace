@@ -1,0 +1,56 @@
+.root {
+  margin-top: 32px;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 80px;
+  }
+}
+
+.content {
+  margin-top: 30px;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 60px;
+  }
+}
+
+//---------
+.slider {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+
+  // hack to force flex item to show besides overflow
+  margin-right: -1rem;
+  padding-right: 1rem;
+  //--
+}
+
+.sliderItem {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  min-width: 300px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+.sliderItem + .sliderItem {
+  margin-left: 1rem;
+}
+
+//---------
+
+.loadMore {
+  display: none;
+  text-align: center;
+  margin-top: 2rem;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
